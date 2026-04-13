@@ -2,7 +2,8 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
 //ctrl+k,8 tüm regionları kapat aç
-public class java { // Sınıf ismi büyük harfle başladı
+
+public class java_copy { // Sınıf ismi büyük harfle başladı
 
     //#region Java Programlama ve Veri Yapıları Çalışma Kılavuzu
     /*
@@ -175,7 +176,7 @@ public class java { // Sınıf ismi büyük harfle başladı
     */ 
     //#endregion
    
-    //#region 1. ve 2. hafta
+    //#region Notlar1
     /*
     platformdan bağımsız -architecture neutral- bir dildir.
     1.kod yazılır
@@ -228,7 +229,7 @@ public class java { // Sınıf ismi büyük harfle başladı
     */
     //#endregion
 
-    //#region 3. ve 4. hafta
+    //#region Notlar2
     /*
     nesne oluşturma -creating objects- ve referanslar 
     new operatörü -> bellekte nesneye yer açmak ve nesneyi başlatmak için new operatörü kullanılır. 
@@ -241,6 +242,60 @@ public class java { // Sınıf ismi büyük harfle başladı
     enum -enumeration- sabit değerler kümesini temsil eden özel bir veri türüdür. enum kullanarak belirli bir kategoriye ait sabit değerleri tanımlayabiliriz. örneğin:
 
     */ 
+    //#endregion
+    
+    //#region Notlar3
+    /*
+    nesne yönelimli tasarım
+
+    yazılım geliştirme akitiviteleri  - software development activities-
+    1.gereksinimleri belirleme -requirements
+    2.tasarım olusturma -design-
+    3.uygulama -implementation
+    4.test etme -testing-
+
+    Method overloading
+    Java'da Metot Aşırı Yükleme (Method Overloading), aynı isme sahip birden fazla metodun, farklı parametre listeleriyle (sayı, tip veya sıralama) aynı sınıf içerisinde tanımlanabilmesidir.
+
+    public int topla(int a, int b) {
+        return a + b;
+    }
+
+    // 2. Metot: Üç tam sayıyı toplar (Parametre sayısı farklı)
+    public int topla(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // 3. Metot: İki double sayıyı toplar (Veri tipi farklı)
+    public double topla(double a, double b) {
+        return a + b;
+    }
+
+    En güzel örneği System.out.println() metodudur. İçine String, int veya double alabilen farklı versiyonları arka planda aşırı yüklenmiştir
+
+    */
+    //#endregion
+    
+    //#region Notlar4
+    /*
+    Bir dizi oluşturulduktan sonra boyutu değiştirilemez. Eğer dinamik bir yapıya ihtiyacın olursa Java'daki ArrayList yapısını kullanmalısın.
+
+    diziler üzerinde gezinme -iteration-
+    int[] puanlar = {85, 90, 78, 92};
+
+    for (int i = 0; i < puanlar.length; i++) {
+        System.out.println("İndeks " + i + ": " + puanlar[i]);
+    }
+    for (int puan : puanlar) {
+        System.out.println("Puan: " + puan);
+    }
+    
+    Java'da diziler aslında birer nesnedir ve bellekte yer açılabilmesi için new anahtar kelimesiyle başlatılmaları (instantiate) gerekir
+    int[] scores = new int[31];
+
+    Diziler sadece int, double gibi ilkel tipleri değil, nesneleri (örneğin String veya sizin yazdığınız sınıfları) de tutabilir
+    Nesne dizisi oluşturduğunuzda, aslında nesnelerin kendisi için değil, nesne referansları (adresleri) için yer ayırırsınız.
+     */
     //#endregion
 
     //--------------------------------------------------------------
@@ -413,6 +468,25 @@ public class java { // Sınıf ismi büyük harfle başladı
     }
     //#endregion
     
+    //#region enum örneği
+    enum Gunler {
+        PAZARTESI,
+        SALI,
+        ÇARŞAMBA,
+        PERŞEMBE,
+        CUMA,
+        CUMARTESI,
+        PAZAR
+      }
+    static void enum_ornegi(){
+      System.out.println("\nEnum örneği:");
+      
+      
+      Gunler bugun = Gunler.PAZARTESI;
+      System.out.println("Bugün günlerden: " + bugun);
+    }
+    //#endregion
+
     //#region arraylist örneği
     static void arrayList_ornek(){
       System.out.println("\nArrayList örneği:");
@@ -435,8 +509,9 @@ public class java { // Sınıf ismi büyük harfle başladı
     //#endregion
     
     //#region çıkmış sorular
-    
-    
+    static void cıkmıs_sorular_vize(){
+      
+    }
     //#endregion
 
     //--------------------------------------------------------------
@@ -455,7 +530,11 @@ public class java { // Sınıf ismi büyük harfle başladı
       is_strings_equal();
       random_sayi();
       math_sinifi();
+      enum_ornegi();
       arrayList_ornek();
+
+      cıkmıs_sorular_vize();
+
       input.close();
     }
     //#endregion
