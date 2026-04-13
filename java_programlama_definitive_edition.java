@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
-//ctrl+k,8 tüm regionları kapat aç
+//ctrl+k,8 tüm regionları kapat aç 
 
 public class java_programlama_definitive_edition { // Sınıf ismi büyük harfle başladı
 
